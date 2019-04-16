@@ -50,4 +50,20 @@ function rowCheck(board) {
   return valid;
 }
 
-console.log(rowCheck(VALID_SOLUTIONS))
+function colCheck(board){
+  const boardTemp = board[0];
+  for(let i=0; i < boardTemp.length; i++){
+    let colSet = new Set()
+    for(let j=0; j < boardTemp[i].length; j++){
+       colSet.add(boardTemp[j][i])
+    }
+    console.log(colSet)
+    if(!eqSet(correct, colSet)){
+      return false
+    }
+  }
+  return true;
+}
+
+
+console.log(colCheck(VALID_SOLUTIONS))

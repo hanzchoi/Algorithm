@@ -51,18 +51,25 @@ function rowCheck(board) {
 }
 
 function colCheck(board){
+  let valid = true;
   const boardTemp = board[0];
   for(let i=0; i < boardTemp.length; i++){
-    let colSet = new Set()
-    for(let j=0; j < boardTemp[i].length; j++){
-       colSet.add(boardTemp[j][i])
+    if(valid === true){
+      let colSet = new Set()
+      for(let j=0; j < boardTemp[i].length; j++){
+         colSet.add(boardTemp[j][i])
+      }
+      console.log(colSet)
+      if(!eqSet(correct, colSet)){
+        valid = false
+        break;
+      }
+    }else{
+      break;
     }
-    console.log(colSet)
-    if(!eqSet(correct, colSet)){
-      return false
-    }
+
   }
-  return true;
+  return valid;
 }
 
 

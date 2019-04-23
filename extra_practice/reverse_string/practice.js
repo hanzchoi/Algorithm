@@ -10,10 +10,7 @@
 // This solution utilize the js built in function to
 // reverse the string
 function reverse(str) {
-  const arr = str.split('');
-  arr.reverse();
-  return arr.join('');
-
+  return str.split('').reverse().join('');
 }
 
 //Solution 2

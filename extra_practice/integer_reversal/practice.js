@@ -26,5 +26,22 @@ function reverseInt(n) {
   }
 }
 
+// Another solution using Math.sign() function it makes the code much cleaner
+
+function reverseIntTwo(n){
+  const sign = Math.sign(n);
+  let revStrInt = n.toString(10).split('').reverse().join('');
+
+  if(sign === -1){
+    return parseInt(revStrInt, 10) * sign;
+  }else if(sign === 1){
+    return parseInt(revStrInt, 10);
+  }else{
+    return 0;
+  }
+}
+
+console.log(reverseIntTwo(-15))
+
 
 module.exports = reverseInt;

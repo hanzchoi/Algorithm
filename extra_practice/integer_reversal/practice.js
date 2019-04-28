@@ -41,7 +41,13 @@ function reverseIntTwo(n){
   }
 }
 
-console.log(reverseIntTwo(-15))
+//this is the thrid solution: it is extreamly similar to the second solution but much more
+// condensed and shorter
+function reversedIntThree(n){
+  const revStrInt = n.toString(10).split('').reverse().join('');
+
+  return parseInt(revStrInt, 10) * Math.sign(n);
+}
 
 
 module.exports = reverseInt;

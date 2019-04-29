@@ -9,7 +9,7 @@ const arr = ["10:31 AM", "2:05 PM", "12:01 AM", "7:00 AM"];
 function regTimeToMilTime(time){
   let hours = parseInt(time.slice(0, 2));
   let mins = time.length === 8 ? time.slice(3, 5) : time.slice(2, 4);
-  let period = time.slice(time.length - 2, time.length);
+  const period = time.slice(time.length - 2, time.length);
 
   if(period === "AM"){
     if(hours === 12){
@@ -20,7 +20,7 @@ function regTimeToMilTime(time){
       }
     }
   }else{
-    if(temp === 12){
+    if(hours === 12){
       hours = "12";
     }else{
       hours += 12;

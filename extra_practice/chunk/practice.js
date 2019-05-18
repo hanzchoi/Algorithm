@@ -11,11 +11,28 @@
 const test1 = [1, 2, 3, 4];
 const test2 = [1, 2, 3, 4, 5];
 
+// Solution One
 function chunk(array, size) {
+  let chunkedArr = [];
 
+  for(let element of array){
+    const last = chunkedArr[chunkedArr.length - 1];
+    if(!last || last.length === size) {
+      chunkedArr.push([element])
+    }else{
+      last.push(element)
+    }
+  }
+
+  return chunkedArr
 }
 
-chunk(test1, 2);
-chunk(test2, 2);
+
+// Solution Two
+const chunckTwo(array, size){
+
+}
+//console.log(chunk(test2, 2));
+//chunk(test2, 2);
 
 module.exports = chunk;

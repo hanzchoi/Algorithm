@@ -26,7 +26,10 @@ const buildCharMap = (str) => {
 // Utilizing RegExp and toLowerCase()
 // "/[^\w]/g" will remove anything but letters
 function anagrams(stringA, stringB) {
-  const aCharMap;
+  const aCharMap = buildCharMap(stringA);
+  const bCharMap = buildCharMap(stringB);
+
+  
   return true;
 }
 

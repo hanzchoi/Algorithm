@@ -13,7 +13,7 @@ const test2 = [1, 2, 3, 4, 5];
 
 // Solution One
 function chunk(array, size) {
-  let chunkedArr = [];
+  const chunkedArr = [];
 
   for(let element of array){
     const last = chunkedArr[chunkedArr.length - 1];
@@ -29,10 +29,19 @@ function chunk(array, size) {
 
 
 // Solution Two
-const chunckTwo(array, size){
+// This one utilize the slice method and index
+const chunckTwo = (array, size) => {
+  const chunked = [];
+  let index = 0;
 
+  while(index < array.length){
+    chunked.push(array.slice(index, index + size));
+    index += size;
+  }
+
+  return chunked;
 }
-//console.log(chunk(test2, 2));
+console.log(chunckTwo(test2, 2));
 //chunk(test2, 2);
 
 module.exports = chunk;

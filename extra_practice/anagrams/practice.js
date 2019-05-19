@@ -8,6 +8,29 @@
 //   anagrams('RAIL! SAFETY!', 'fairy tales') --> True
 //   anagrams('Hi there', 'Bye there') --> False
 
-function anagrams(stringA, stringB) {}
+
+const str1 = "RAIL! SAFETY!";
+const str2 = "fairy tales";
+
+// Helper function to map out each string
+const buildCharMap = (str) => {
+  const charMap = {};
+  for(let char of str.replace(/[^\w]/g, '').toLowerCase()){
+    charMap[char] = charMap[char] + 1 || 1;
+  }
+  return charMap;
+}
+
+
+// Solution 1
+// Utilizing RegExp and toLowerCase()
+// "/[^\w]/g" will remove anything but letters
+function anagrams(stringA, stringB) {
+  const aCharMap;
+  return true;
+}
+
+console.log(anagrams(str1, str2));
+
 
 module.exports = anagrams;

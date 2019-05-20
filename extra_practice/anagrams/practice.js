@@ -42,7 +42,17 @@ function anagrams(stringA, stringB) {
   return true;
 }
 
-console.log(anagrams(str1, str2));
+// Helper function to remove non letter
+// then to lowercase, then to array and finally sorting them
+const sortedString = (str) => {
+  return str.replace(/[^\w]/g, '').toLowerCase().split('').sort().join('');
+}
 
+// Solution 2
+const anagramsTwo = (stringA, stringB) => {
+  return sortedString(stringA) === sortedString(stringB);
+}
+
+//console.log(anagramsTwo(str1, str2));
 
 module.exports = anagrams;

@@ -10,15 +10,16 @@
 const test1 = 'a short sentence';
 
 function capitalize(str) {
+  capitalizeSentence = [];
   let temp = str.split(' ');
   for(let word of temp){
     if(word.length === 1){
-      word = word.toUpperCase();
+      capitalizeSentence.push(word.toUpperCase())
     }else{
-      word = word.charAt(0).toUpperCase() + word.slice(1)
+      capitalizeSentence.push(word.charAt(0).toUpperCase() + word.slice(1))
     }
   }
-  return temp
+  return capitalizeSentence.join(' ')
 
 }
 

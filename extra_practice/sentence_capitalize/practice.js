@@ -23,6 +23,20 @@ function capitalize(str) {
 
 }
 
+function capitalizeTwo(str){
+  const words = [];
+
+  for( let word of str.split(' ')){
+    word.push(word[0].toUpperCase() + word.slice(1));
+  }
+
+  return words.join(' ');
+}
+
+function capitalizeThree(str){
+
+}
+
 console.log(capitalize(test1))
 
 module.exports = capitalize;

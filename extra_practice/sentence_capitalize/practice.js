@@ -34,9 +34,20 @@ function capitalizeTwo(str){
 }
 
 function capitalizeThree(str){
+  let result = str.charAt(0).toUpperCase()
+
+  for(let i = 1; i < str.length; i++){
+    if(str.charAt(i - 1) === ' '){
+      result += str.charAt(i).toUpperCase();
+    }else{
+      result += str.charAt(i)
+    }
+  }
+
+  return result
 
 }
 
-console.log(capitalize(test1))
+console.log(capitalizeThree(test1))
 
 module.exports = capitalize;
